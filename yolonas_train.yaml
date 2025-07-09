@@ -1,0 +1,40 @@
+experiment_name: yolonas_custom
+ckpt_root_dir: checkpoints
+architecture: yolo_nas_s
+
+checkpoint_params:
+  checkpoint_dir: checkpoints
+  checkpoint_path: null
+  save_checkpoints: true
+  save_best: true
+  strict_load: false
+  pretrained_weights: null
+  load_backbone: false
+
+dataset_params:
+  dataset_interface_type: DetectionDatasetInterface
+
+  train_dataset_params:
+    data_dir: ./dataset
+    images_dir: images/train
+    labels_dir: labels/train
+    dataset_type: yolo
+    classes: ['object']
+
+  val_dataset_params:
+    data_dir: ./dataset
+    images_dir: images/val
+    labels_dir: labels/val
+    dataset_type: yolo
+    classes: ['object']
+
+arch_params:
+  model_name: yolo_nas_s
+  num_classes: 1
+
+training_hyperparams:
+  max_epochs: 30
+  initial_lr: 5e-4
+  loss: PPYoloELoss
+  metric_to_watch: mAP
+  greater_metric_to_watch_is_better: true
