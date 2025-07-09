@@ -20,12 +20,15 @@ Uses YOLO format annotations and is intended for custom object detection, specif
 
 Due to privacy policies, the dataset is excluded. Expected structure:
 
-``` dataset/ 
+``` 
+dataset/ 
 ├── images/
     ├── train/ │ 
     └── val/ 
 ├── labels/ │ 
     ├── train/ │
     └── val/ 
-``` </pre>
+
+```
+ </pre>
 
