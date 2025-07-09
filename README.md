@@ -13,7 +13,7 @@ This project explores object detection using the YOLO-NAS model on a custom data
 
 Due to privacy policies, the dataset is excluded. Expected structure:
 
-dataset/
+##dataset/
 ├── images/
 │ ├── train/
 │ └── val/
